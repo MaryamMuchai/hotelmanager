@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .box { 
     width:1000px;
     float:right;
@@ -37,3 +38,39 @@
         }
         .sidebar ul li:hover { background-color: blue;}
         .sidebar ul li a:hover { color:white;}
+=======
+#contactUs{
+    color:black;
+}
+.fa {
+    padding: 20px;
+    font-size: 36px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  position: relative;
+  left: 75%;
+  bottom: 285px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+ 
+  color: #297fc0;
+}
+
+.fa-twitter {
+  
+  color: #55ACEE;
+}
+.fa-youtube {
+    color: red;
+}
+.fa-instagram{
+    color: #E1306C;
+}
+>>>>>>> main
