@@ -9,7 +9,7 @@ $(document).ready(function(){
       }
       
       else {
-        alert("Please enter your email!");
+        alert("Please Enter Your Email!");
       }
       });
     });
