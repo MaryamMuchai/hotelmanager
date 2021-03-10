@@ -40,7 +40,10 @@
 .box { 
   width:100px;
   float:right;
-  border:1px solid black; }
+  border:1px solid black;
+ 
+
+ }
 
   .box ul li {
       width:120px;
@@ -51,7 +54,7 @@
   .box ul li a { text-decoration: none;
       color: white;
   }
-  .box ul li:hover { background-color: blue;}
+  .box ul li:hover { background-color: white;}
   .box ul li a:hover { color:white;}
   body,html{
       font-family: 'Courier New', Courier, monospace;
@@ -78,8 +81,10 @@
       .sidebar ul li a { text-decoration: none;
           color: white;
       }
-      .sidebar ul li:hover { background-color: blue;}
-      .sidebar ul li a:hover { color:white;}
+      .sidebar ul li:hover { background-color: blue;
+      }
+      .sidebar ul li a:hover { color:white;
+      }
       .container1 {
         display: flex;
       }
