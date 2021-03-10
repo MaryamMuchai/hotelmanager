@@ -1,0 +1,82 @@
+#contactUs{
+    color: aqua;
+    position: relative;
+    top: 2800px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.fa {
+    padding: 20px;
+    font-size: 36px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  position: relative;
+  left: 75%;
+  top: 2000px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+ 
+  color: #297fc0;
+}
+
+.fa-twitter {
+  
+  color: #55ACEE;
+}
+.fa-youtube {
+    color: red;
+}
+.fa-instagram{
+    color: #E1306C;
+}
+.box { 
+  width:1000px;
+  float:right;
+  border:1px solid black; }
+
+  .box ul li {
+      width:120px;
+      float:left;
+      margin: 10px auto;
+      text-align: center;
+  }
+  .box ul li a { text-decoration: none;
+      color: white;
+  }
+  .box ul li:hover { background-color: blue;}
+  .box ul li a:hover { color:white;}
+  body,html{
+      font-family: 'Courier New', Courier, monospace;
+      color: white;
+      background-image: url(./images/bg.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow-x: hidden;
+      height: 100%;
+      scroll-behavior: smooth;
+  }
+  .sidebar { 
+      height:700px;
+      width: 200px;
+      float:left;
+      border:1px solid black; }
+  
+      .sidebar ul li {
+          width:120px;
+          float:left;
+          margin: 10px auto;
+          text-align: center;
+      }
+      .sidebar ul li a { text-decoration: none;
+          color: white;
+      }
+      .sidebar ul li:hover { background-color: blue;}
+      .sidebar ul li a:hover { color:white;}
