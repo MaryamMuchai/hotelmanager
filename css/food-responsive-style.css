@@ -1,0 +1,131 @@
+#foodContainer {
+  display: grid;
+  width: 95vw;
+  margin: auto;
+  grid-template-columns: 0.25fr 0.5fr 0.5fr;
+  grid-template-rows: 0.125fr 0.05fr 0.5fr 0.5fr;
+  grid-template-areas:
+    "nav nav nav "
+    "sidebar foodMenu foodMenu"
+    "sidebar rice soups"
+    "sidebar pasta pasta"
+    "sidebar contact contact"
+    "sidebar footer footer";
+}
+
+#nav {
+  grid-area: nav;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99%;
+  z-index: 100;
+}
+
+#foodMenu {
+  grid-area: foodMenu;
+  margin-top: 40px;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-self: center;
+}
+
+#rice {
+  grid-area: rice;
+  height: 420px;
+  width: 400px;
+  padding: margin;
+}
+.menu-item {
+  width: 400px !important;
+  margin: 0 auto !important;
+  flex-wrap: nowrap !important;
+  overflow-y: auto !important;
+}
+
+#soups {
+  grid-area: soups;
+  height: 420px;
+  width: 400px;
+  border: #000 2px solid;
+}
+
+#pasta {
+  grid-area: pasta;
+  height: 420px;
+  width: 400px;
+
+  border: #000 2px solid;
+}
+
+#contact-section {
+  grid-area: contact;
+  width: inherit;
+
+  text-align: center;
+}
+#footer {
+  grid-area: footer;
+}
+
+#footer a {
+  color: #fff;
+}
+
+@media screen and (max-width: 576px) {
+  #pageContainer {
+    display: grid;
+    width: 100vw;
+    height: max-content;
+    margin: auto;
+    grid-template-columns: 0.25fr 0.5fr;
+    grid-template-rows: 0.125fr 0.05fr 0.5fr 0.5fr 0.05fr 0.5fr 0.5fr 0.05fr 0.5fr;
+    grid-template-areas:
+      "nav nav "
+      "sidebar foodMenu "
+      "sidebar rice"
+      "sidebar soups"
+      "sidebar pasta"
+      "sidebar drinks"
+      "sidebar contact"
+      "sidebar footer";
+  }
+
+  #sidebarToggler {
+    top: 56px;
+    display: inline;
+  }
+
+  #sidebar {
+    z-index: 200;
+  }
+
+  #rice {
+    height: max-content;
+    width: 90vw;
+  }
+  #soups {
+    height: max-content;
+    width: 90vw;
+  }
+  #pasta {
+    height: max-content;
+    width: 90vw;
+  }
+  #drinks {
+    height: max-content;
+    width: 90vw;
+  }
+  #footer {
+    justify-content: center;
+  }
+}
