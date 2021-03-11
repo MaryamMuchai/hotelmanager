@@ -1,7 +1,7 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     $("form").submit(function(event){
       event.preventDefault();
-      $("#submits").click(function(){  
+      $("#submit").click(function(){  
       var email = $("#email").val();
       var message = $("#comment").val();
       if ($("#email").val() && $("#comment").val()){
@@ -12,8 +12,7 @@ $(document).ready(function(){
         alert("Please Enter Your Email!");
       }
       });
-    });
-    
+     });    */
     
 var $slider = $('.slider');
 var $slideBox = $slider.find('.slide-box');
@@ -79,5 +78,19 @@ function getReceipt() {
 	runningTotal = itemTotal;
 	getFriedrice(runningTotal,text1,text2);
 };
-});
 
+
+
+//contact form
+function submitcontact(){
+    alert ( "we have received your message. Thank you for reaching out to us.");
+} 
+ 
+//booking
+function submitbooking() {
+    alert ("Your booking is successful, we will email you the confirmation code");
+}
+//food menu
+function submitorder() {
+    alert( "Your order will be brought to you soon!");
+}
