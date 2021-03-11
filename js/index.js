@@ -13,6 +13,8 @@ $(document).ready(function(){
       }
       });
     });
+    
+    
 var $slider = $('.slider');
 var $slideBox = $slider.find('.slide-box');
 var $leftControl = $slider.find('.slide-left');
@@ -78,3 +80,4 @@ function getReceipt() {
 	getFriedrice(runningTotal,text1,text2);
 };
 });
+
