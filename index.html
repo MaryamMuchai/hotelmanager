@@ -233,6 +233,13 @@
 
     <div class="container">
 
+      <div class="row">
+        <div class="column">
+
+        </div>
+
+      </div>
+
       
         <div id="food-menu">
 
@@ -243,27 +250,27 @@
                     <h3>RICE:</h3>
                     <input class="rice" type="checkbox" name="rice" value="jeera rice"> jeera rice-ksh200 per plate
                     <br>
-                    <img src="/images/jeera rice.jpg" alt="">
+                    <img src="./images/jeera rice.jpg" alt="" height="120">
                     <br>
                     <input class="rice" type="checkbox" name="rice" value="fried rice"> fried rice-ksh 300 per plate
                     <br>
-                    <img src="/images/easy_fried_rice-1-500x500.jpg" alt="">
+                    <img src="./images/easy_fried_rice-1-500x500.jpg" alt="" height="120">
                     <br>
                     <input class="rice" type="checkbox" name="rice" value="triple fried rice"> triple fried rice-ksh 250 per plate
                     <br>
-                    <img src="/images/triple fried rice.jpg" alt="">
+                    <img src="./images/triple fried rice.jpg" alt="" height="120">
                     <br>
                     <input class="rice" type="checkbox" name="rice" value="chilly rice"> chilly rice-ksh 150 per a half
                     <br>
-                    <img src="/images/Spicy-Turmeric-Fried-Rice-featured-image.jpg" alt="">
+                    <img src="./images/Spicy-Turmeric-Fried-Rice-featured-image.jpg" alt="" height="120">
                     <br>
                     <input class="rice" type="checkbox" name="rice" value="mushroom rice"> mushroom rice-ksh 250 per plate
                     <br>
-                    <img src="/images/mushroom rice.jpeg" alt="">
+                    <img src="./images/mushroom rice.jpeg" alt="" height="120">
                     <br>
                     <input class="rice" type="checkbox" name="rice" value="combination rice"> combination rice-ksh 200 per plate
                     <br>
-                    <img src="/images/combination-fried-rice.jpg" alt="">
+                    <img src="./images/combination-fried-rice.jpg" alt="" height="120">
 
                     <p>nice choice</p>
 
@@ -273,15 +280,15 @@
                     <h3>soups:</h3>
                     <input class="soup" type="checkbox" name="soup" value="clear soup"> clear soup-ksh 80 full
                     <br>
-                    <img src="/images/clear soup.jpeg" alt="">
+                    <img src="./images/clear soup.jpeg" alt="" height="120">
                     <br>
                     <input class="soup" type="checkbox" name="soup" value="manchow soup"> manchow soup-ksh80 full
                     <br>
-                    <img src="/images/Vegetable_Manchow_Soup.jpg" alt="">
+                    <img src="./images/Vegetable_Manchow_Soup.jpg" alt="" height="120">
                     <br>
                     <input class="soup" type="checkbox" name="soup" value="royal soup"> royal soup-ksh 100 full
                     <br>
-                    <img src="/images/royal soup.jpg" alt="">
+                    <img src="./images/royal soup.jpg" alt="" height="120">
                     <br>
                     <input class="soup" type="checkbox" name="soup" value="sweet & com soup"> sweet & com soup-ksh100 full
                     <br>
@@ -294,21 +301,17 @@
 
                     <input class="pasta" type="checkbox" name="pasta" value="pasta puttanesca"> pasta puttanesca-ksh 300
                     <br>
-                    <img src="/images/pasta puttanesca.png" alt="">
+                    <img src="./images/pasta puttanesca.png" alt="" height="120">
                     <br>
                     <input class="pasta" type="checkbox" name="pasta" value="italian pasta salad"> italian pasta salad-ksh 400
                     <br>
-                    <img src="/images/italian pasta salad.jpeg" alt="">
+                    <img src="./images/italian pasta salad.jpeg" alt="" height="120">
                     <br>
                     <input class="pasta" type="checkbox" name="pasta" value="creamy sausage pasta"> creamy sausage pasta- ksh 450
                     <br>
-                    <img src="/images/creamy sausage.jpeg" alt="">
+                    <img src="./images/creamy sausage.jpeg" alt="" height="120">
                     <br>
-                    <input class="pasta" type="checkbox" name="pasta" value="cheese marinara"> cheese marinara- ksh 500
-
-                    <br>
-                    <img src="" alt="">
-
+                    
                 </div>
 
                 <div class="menu-item"> 
@@ -316,29 +319,61 @@
 
                     <input class="drinks" type="checkbox" name="drinks" value="mango smoothie"> mango smoothie-ksh 100
                     <br>
-                    <img src="/images/mango smoothie.jpg" alt="">
+                    <img src="./images/mango smoothie.jpg" alt="" height="120">
                     <br>
                     <input class="driks" type="checkbox" name="drinks" value="lemonade"> lemonade-ksh 80
                     <br>
-                    <img src="/images/lemonade.jpg" alt="">
+                    <img src="./images/lemonade.jpg" alt="" height="120">
                     <br>
                     <input class="drinks" type="checkbox" name="drinks" value="coconut milk"> coconut milk-ksh 150
                     <br>
-                    <img src="/images/coconut milk.jpg" alt="">
+                    <img src="./images/coconut milk.jpg" alt="" height="120">
                     <br>
                     <input class="drinks" type="checkbox" name="drinks" value="cocoa"> cocoa- ksh 200
                     <br>
-                    <img src="/images/cacao-juice-trend.jpg" alt="">
+                    <img src="./images/cacao-juice-trend.jpg" alt="" height="120">
                     <br>
                     <input class="drinks" type="checkbox" name="drinks" value="orange juice"> orange juice-ksh 300
 
                     <br>
-                    <img src="/images/orange juice.jpg" alt="">
+                    <img src="./images/orange juice.jpg" alt="" height="120">
 
                 </div>
 
-
             </form>
+
+            <div class="controls">
+              <div class="button" onclick="getreceipt()">
+                <p>place order</p>
+
+
+              </div>
+              <div class="button" onclick="clearAll()">
+                <p>cancel</p>
+
+              </div>
+
+            </div>
+            <div id="cart">
+              <div id="head1">
+                <h3>order items</h3>
+
+              </div>
+              <div id="head2">
+
+                <h3>item price</h3>
+
+
+              </div>
+              <div id="showText1"></div>
+              <div id="showText2"></div>
+              <div id="total price">
+                <h3>Grand Total</h3>
+
+              </div>
+              <div id="totalprice2"></div>
+
+            </div>
 
 
 
