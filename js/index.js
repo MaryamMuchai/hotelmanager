@@ -1,3 +1,18 @@
+$(document).ready(function(){
+    $("form").submit(function(event){
+      event.preventDefault();
+      $("#submits").click(function(){  
+      var email = $("#email").val();
+      var message = $("#comment").val();
+      if ($("#email").val() && $("#comment").val()){
+        alert ( "we have received your message. Thank you for reaching out to us.");
+      }
+      
+      else {
+        alert("Please Enter Your Email!");
+      }
+      });
+    });
 var $slider = $('.slider');
 var $slideBox = $slider.find('.slide-box');
 var $leftControl = $slider.find('.slide-left');
@@ -33,4 +48,33 @@ $rightControl.on('click', function() {
 
 $(window).resize(function() {
     $slides.width($(window).width()).height($(window).height);
+});
+function getReceipt() {
+	text1 = "";
+	text2 = "";
+	var runningTotal = 0;
+	var sizeTotal = 0;
+	var sizeArray = document.getElementsByClassName("rice");
+	for (var i = 0; i < itemArray.length; i++) {
+		if (sizeArray[i].checked) {
+			var selectedSize = sizeArray[i].value;
+			text1 = text1+selectedItem+"<br>";
+		}
+	}
+	if (selectedItem === "jeera rice") {
+		itemTotal = 6;
+		text2 = text2+itemTotal+"<br>";
+	} else if (selectedItem === "fried rice") {
+		itemTotal = 10;
+		text2 = text2+itemTotal+"<br>";
+	} else if (selecteditem === "clear soup") {
+		itemTotal = 14;
+		text2 = text2+itemTotal+"<br>";
+	} else if (selectedItem === "pasta putanesca") {
+		itemTotal = 16;
+		text2 = text2+itemTotal+"<br>";
+	}
+	runningTotal = itemTotal;
+	getFriedrice(runningTotal,text1,text2);
+};
 });
