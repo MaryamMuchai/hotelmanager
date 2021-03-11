@@ -55,7 +55,13 @@
               <a class="nav-link" href="#">About Us</a>
             </li>
             <li class="nav-item mx-3 dropdown">
-              <a class="nav-link" href="#">Book your room</a>
+              <a
+                class="nav-link"
+                href="#"
+                data-toggle="modal"
+                data-target="#bookNow"
+                >Book your room</a
+              >
             </li>
           </ul>
         </div>
@@ -399,6 +405,118 @@
       </footer>
     </div>
 
+    <!-- modal -->
+    <div
+      class="modal fade"
+      id="bookNow"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog darker-bg">
+        <div class="modal-content darker-bg">
+          <div class="modal-header">
+            <!-- This is the book now button to reaveal the form -->
+            <h5 class="modal-title font-weight-bold" id="exampleModalLabel">
+              Book Room Now
+            </h5>
+            <button
+              type="button"
+              class="close btn text-white bg-transparent"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex align-items-center justify-content-center w-100">
+              <form onSubmit="submit(event)" class="rounded-lg">
+                <div class="row mx-auto w-100 my-2">
+                  <div
+                    class="form-group col justify-content-center align-items-center"
+                  >
+                    <label for="roomType" class="font-weight-bold"
+                      >Room Type</label
+                    >
+                    <select
+                      type="text"
+                      name="roomType"
+                      id=""
+                      class="form-control form-control-sm"
+                      placeholder=""
+                      aria-describedby="helpId"
+                    >
+                      <option value="" disabled selected>
+                        Select an option...
+                      </option>
+                      <option value="">Single Room</option>
+                      <option value="">Double Room</option>
+                    </select>
+                    <small id="helpId" class="text-muted">Help text</small>
+                  </div>
+                </div>
+
+                <div class="row w-100 mx-auto my-2">
+                  <div class="col justify-content-center align-items-center">
+                    <div class="form-group">
+                      <label for="checkIn " class="font-weight-bold"
+                        >Check In</label
+                      >
+                      <input
+                        type="date"
+                        name=""
+                        id="checkIn"
+                        class="form-control form-control-sm"
+                        placeholder=""
+                        aria-describedby="helpId"
+                      />
+                      <small id="helpId" class="text-muted">Help text</small>
+                    </div>
+                  </div>
+                  <div class="col justify-content-center align-items-center">
+                    <div class="form-group">
+                      <label for="checkOut" class="font-weight-bold"
+                        >Check Out</label
+                      >
+                      <input
+                        type="date"
+                        name=""
+                        id="checkIn"
+                        class="form-control form-control-sm"
+                        placeholder=""
+                        aria-describedby="helpId"
+                      />
+                      <small id="helpId" class="text-muted">Help text</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="row w-100 mx-auto my-2">
+                  <div class="col mx-auto">
+                    <button
+                      class="btn btn-dark w-100"
+                      data-dismiss="modal"
+                      type="submit"
+                    >
+                      Book Now
+                    </button>
+                  </div>
+                  <div class="col mx-auto">
+                    <button
+                      class="btn btn-white border-dark w-100"
+                      type="submit"
+                      data-dismiss="modal"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
