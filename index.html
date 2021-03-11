@@ -9,257 +9,310 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       type="text/css"
       media="screen"
       href="./bootstrap-4.6.0-dist/css/bootstrap.css"
+    /> -->
+    <!-- added new bootstrap cdn links  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="./style.css" />
-    <script src="main.js"></script>
+    <!-- linking index to the new css file called responsive-style -->
+    <link rel="stylesheet" href="./css/responsive-style.css" />
+    <!-- <script src="main.js"></script> -->
   </head>
   <!---Navbar-->
   <body>
-    <div class="box">
-      <li><a href="#">Menu</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Book your room</a></li>
-    </div>
-    <div class="sidebar">
-      <div class="none">
-        <h2>KC Hotel</h2>
-        <ul>
-          <li><a href="#">Overview</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Food</a></li>
-          <li><a href="#">Drinks</a></li>
-          <li><a href="#contactUs">Feedback</a></li>
-        </ul>
-      </div>
-    </div>
+    <div id="pageContainer">
+      <!-- changed to bootstrap navbar for easier responsive  -->
+      <nav id="nav" class="navbar navbar-expand-lg navbar-dark darker-bg px-5">
+        <a class="navbar-brand" href="#">KC Hotel</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!--contact section-->
-    <div class="container">
-      <div id="contactUs">
-        <div class="row">
-          <div class="col-md-12">
-            <form id="contactForm">
-              <div class="heading" href="#feedback">
-                <h2>Contact Us</h2>
-              </div>
-              <div class="md-12">
-                <label for="email" class="form-label">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="Contactemail"
-                  aria-describedby="emailHelp"
-                  required
-                />
-                <div id="emailHelp" class="form-text">
-                  We'll never share your email with anyone else.
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav justify-content-end flex-row">
+            <li class="nav-item mx-3 active">
+              <a class="nav-link" href="#">Menu</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item mx-3 dropdown">
+              <a class="nav-link" href="#">Book your room</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="sidebar" class="sidebar darker-bg">
+        <button
+          id="sidebarToggler"
+          class="fixed-top bg-transparent border-0 text-white"
+        >
+          Open Sidebar
+        </button>
+        <div class="sidebar-items">
+          <ul>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">Drinks</a></li>
+            <li><a href="#contactUs">Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 id="foodMenu">FOOD MENU</h2>
+
+      <div
+        id="rice"
+        class="card darker-bg border border-dark rounded mb-4 px-3 mx-2"
+      >
+        <h4 class="card-title">RICE</h4>
+        <div class="menu-item card-body">
+          <input class="rice" type="checkbox" name="rice" value="jeera rice" />
+          jeera rice-ksh200 per plate
+          <br />
+          <input class="rice" type="checkbox" name="rice" value="fried rice" />
+          fried rice-ksh 300 per plate
+          <br />
+          <input
+            class="rice"
+            type="checkbox"
+            name="rice"
+            value="triple fried rice"
+          />
+          triple fried rice-ksh 250 per plate
+          <br />
+          <input class="rice" type="checkbox" name="rice" value="chilly rice" />
+          chilly rice-ksh 150 per a half
+          <br />
+          <input
+            class="rice"
+            type="checkbox"
+            name="rice"
+            value="mushroom rice"
+          />
+          mushroom rice-ksh 250 per plate
+          <br />
+          <input
+            class="rice"
+            type="checkbox"
+            name="rice"
+            value="combination rice"
+          />
+          combination rice-ksh 200 per plate
+        </div>
+        <button type="submit" class="btn btn-dark btn-sm">Add to Order</button>
+      </div>
+
+      <div
+        class="card darker-bg border border-dark rounded mb-4 px-3 mx-2"
+        id="soups"
+      >
+        <h3 class="card-title">Soups:</h3>
+        <div class="menu-item card-body">
+          <input class="soup" type="checkbox" name="soup" value="clear soup" />
+          clear soup-ksh 80 full
+          <br />
+          <input
+            class="soup"
+            type="checkbox"
+            name="soup"
+            value="manchow soup"
+          />
+          manchow soup-ksh80 full
+          <br />
+          <input class="soup" type="checkbox" name="soup" value="royal soup" />
+          royal soup-ksh 100 full
+          <br />
+          <input
+            class="soup"
+            type="checkbox"
+            name="soup"
+            value="sweet & com soup"
+          />
+          sweet & com soup-ksh100 full
+          <br />
+          <p>enjoy your meal</p>
+        </div>
+        <button type="submit" class="btn btn-dark btn-sm">Add to Order</button>
+      </div>
+
+      <div
+        class="card darker-bg border border-dark rounded mb-4 px-3 mx-2"
+        id="pasta"
+      >
+        <div class="menu-item card-body">
+          <h3 class="card-title">Pasta:</h3>
+
+          <input
+            class="pasta"
+            type="checkbox"
+            name="pasta"
+            value="pasta puttanesca"
+          />
+          pasta puttanesca-ksh 300
+          <br />
+          <input
+            class="pasta"
+            type="checkbox"
+            name="pasta"
+            value="italian pasta salad"
+          />
+          italian pasta salad-ksh 400
+          <br />
+          <input
+            class="pasta"
+            type="checkbox"
+            name="pasta"
+            value="creamy sausage pasta"
+          />
+          creamy sausage pasta- ksh 450
+          <br />
+          <input
+            class="pasta"
+            type="checkbox"
+            name="pasta"
+            value="cheese marinara"
+          />
+          cheese marinara- ksh 500
+          <br />
+        </div>
+        <button type="submit" class="btn btn-dark btn-sm">Add to Order</button>
+      </div>
+
+      <div
+        class="card darker-bg border border-dark rounded mb-4 px-3 mx-2"
+        id="drinks"
+      >
+        <div class="menu-item card-body">
+          <h3 class="card-title">Drinks</h3>
+
+          <input
+            class="drinks"
+            type="checkbox"
+            name="drinks"
+            value="mango smoothie"
+          />
+          mango smoothie-ksh 100
+          <br />
+          <input class="driks" type="checkbox" name="drinks" value="lemonade" />
+          lemonade-ksh 80
+          <br />
+          <input
+            class="drinks"
+            type="checkbox"
+            name="drinks"
+            value="coconut milk"
+          />
+          coconut milk-ksh 150
+          <br />
+          <input class="drinks" type="checkbox" name="drinks" value="cocoa" />
+          cocoa- ksh 200
+          <br />
+          <input
+            class="drinks"
+            type="checkbox"
+            name="drinks"
+            value="orange juice"
+          />
+          orange juice-ksh 300
+          <br />
+        </div>
+        <button type="submit" class="btn btn-dark btn-sm">Add to Order</button>
+      </div>
+
+      <div
+        class="d-flex flex-row justify-content-center w-100 my-3 align-item-center mx-auto"
+        id="contact-section"
+      >
+        <div
+          class="card darker-bg border border-dark rounded mb-4 px-5 py-3 mx-2 mx-auto w-100"
+          id="contact"
+        >
+          <div class="row">
+            <div class="col-md-12">
+              <form id="contactForm">
+                <div class="heading" href="#feedback">
+                  <h2>Contact Us</h2>
                 </div>
-              </div>
-              <div class="form-floating">
-                <textarea
-                  class="form-control"
-                  placeholder="Leave a comment here"
-                  id="floatingTextarea"
-                ></textarea>
-                <label for="floatingTextarea">Comments</label>
-              </div>
-              <button type="submit" class="btn btn-primary mt-12">
-                Submit
-              </button>
-            </form>
+                <div class="md-12 my-3">
+                  <label for="email" class="text-white text-start h5 w-100"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control form-control-sm"
+                    id="Contactemail"
+                    placeholder="Enter your email here"
+                    aria-describedby="emailHelp"
+                    required
+                  />
+                  <div id="emailHelp" class="form-text text-start disabled">
+                    We'll never share your email with anyone else.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label
+                    for="floatingTextarea"
+                    class="text-start w-100 h5text-white"
+                    >Comments</label
+                  >
+                  <textarea
+                    class="form-control form-control-sm"
+                    placeholder="Leave a comment here"
+                    id="floatingTextarea"
+                    rows="5"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-dark w-100 mt-3 px-5 btn-sm"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
+      <footer id="footer" class="w-100">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-youtube"></a>
+      </footer>
     </div>
 
-    <!-- HEADER -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
 
-    <!-- MENU -->
-
-    <div class="container-1">
-      <div id="food-menu">
-        <h2>FOOD MENU</h2>
-        <form id="form">
-          <div class="menu-item">
-            <h3>RICE:</h3>
-            <input
-              class="rice"
-              type="checkbox"
-              name="rice"
-              value="jeera rice"
-            />
-            jeera rice-ksh200 per plate
-            <br />
-            <input
-              class="rice"
-              type="checkbox"
-              name="rice"
-              value="fried rice"
-            />
-            fried rice-ksh 300 per plate
-            <br />
-            <input
-              class="rice"
-              type="checkbox"
-              name="rice"
-              value="triple fried rice"
-            />
-            triple fried rice-ksh 250 per plate
-            <br />
-            <input
-              class="rice"
-              type="checkbox"
-              name="rice"
-              value="chilly rice"
-            />
-            chilly rice-ksh 150 per a half
-            <br />
-            <input
-              class="rice"
-              type="checkbox"
-              name="rice"
-              value="mushroom rice"
-            />
-            mushroom rice-ksh 250 per plate
-            <br />
-            <input
-              class="rice"
-              type="checkbox"
-              name="rice"
-              value="combination rice"
-            />
-            combination rice-ksh 200 per plate
-
-            <p>nice choice</p>
-          </div>
-
-          <div class="menu-item">
-            <h3>soups:</h3>
-            <input
-              class="soup"
-              type="checkbox"
-              name="soup"
-              value="clear soup"
-            />
-            clear soup-ksh 80 full
-            <br />
-            <input
-              class="soup"
-              type="checkbox"
-              name="soup"
-              value="manchow soup"
-            />
-            manchow soup-ksh80 full
-            <br />
-            <input
-              class="soup"
-              type="checkbox"
-              name="soup"
-              value="royal soup"
-            />
-            royal soup-ksh 100 full
-            <br />
-            <input
-              class="soup"
-              type="checkbox"
-              name="soup"
-              value="sweet & com soup"
-            />
-            sweet & com soup-ksh100 full
-            <br />
-            <p>enjoy your meal</p>
-          </div>
-
-          <div class="menu-item">
-            <h3>pasta:</h3>
-
-            <input
-              class="pasta"
-              type="checkbox"
-              name="pasta"
-              value="pasta puttanesca"
-            />
-            pasta puttanesca-ksh 300
-            <br />
-            <input
-              class="pasta"
-              type="checkbox"
-              name="pasta"
-              value="italian pasta salad"
-            />
-            italian pasta salad-ksh 400
-            <br />
-            <input
-              class="pasta"
-              type="checkbox"
-              name="pasta"
-              value="creamy sausage pasta"
-            />
-            creamy sausage pasta- ksh 450
-            <br />
-            <input
-              class="pasta"
-              type="checkbox"
-              name="pasta"
-              value="cheese marinara"
-            />
-            cheese marinara- ksh 500
-            <br />
-          </div>
-
-          <div class="menu-item">
-            <h3>DRINKS</h3>
-
-            <input
-              class="drinks"
-              type="checkbox"
-              name="drinks"
-              value="mango smoothie"
-            />
-            mango smoothie-ksh 100
-            <br />
-            <input
-              class="driks"
-              type="checkbox"
-              name="drinks"
-              value="lemonade"
-            />
-            lemonade-ksh 80
-            <br />
-            <input
-              class="drinks"
-              type="checkbox"
-              name="drinks"
-              value="coconut milk"
-            />
-            coconut milk-ksh 150
-            <br />
-            <input class="drinks" type="checkbox" name="drinks" value="cocoa" />
-            cocoa- ksh 200
-            <br />
-            <input
-              class="drinks"
-              type="checkbox"
-              name="drinks"
-              value="orange juice"
-            />
-            orange juice-ksh 300
-            <br />
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <footer>
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-instagram"></a>
-      <a href="#" class="fa fa-youtube"></a>
-    </footer>
+    <script src="js/sidebar.js"></script>
   </body>
 </html>
