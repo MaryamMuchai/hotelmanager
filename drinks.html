@@ -26,12 +26,13 @@
     <link rel="stylesheet" href="./style.css" />
     <!-- linking index to the new css file called responsive-style -->
     <link rel="stylesheet" href="./css/index-responsive-style.css" />
+    <link rel="stylesheet" href="./css/drink-responsive-style.css" />
 
     <!-- <script src="main.js"></script> -->
   </head>
   <!---Navbar-->
   <body>
-    <div id="pageContainer">
+    <div id="drinkContainer">
       <!-- changed to bootstrap navbar for easier responsive  -->
       <nav id="nav" class="navbar navbar-expand-lg navbar-dark darker-bg px-5">
         <a class="navbar-brand" href="#">KC Hotel</a>
@@ -77,7 +78,7 @@
         </button>
         <div class="sidebar-items">
           <ul>
-            <li><a href="#">Overview</a></li>
+            <li><a href="index.html">Overview</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="food.html">Food</a></li>
             <li><a href="drinks.html">Drinks</a></li>
@@ -85,199 +86,12 @@
           </ul>
         </div>
       </div>
-      <h2 id="foodMenu">FOOD MENU</h2>
 
       <div
-        id="rice"
-        class="card darker-bg border border-dark rounded mb-4 px-3 mx-2"
-      >
-        <h4 class="card-title">RICE</h4>
-        <div class="menu-item card-body col">
-          <img
-            class="food-image img-fluid"
-            src="./images/jeera rice.jpg"
-            alt=""
-            height="120"
-          />
-          <input class="rice" type="checkbox" name="rice" value="jeera rice" />
-          jeera rice-ksh200 per plate
-          <br />
-          <img
-            class="food-image img-fluid"
-            src="./images/easy_fried_rice-1-500x500.jpg"
-            alt=""
-            height="120"
-          />
-          <input class="rice" type="checkbox" name="rice" value="fried rice" />
-          fried rice-ksh 300 per plate
-          <br /><img
-            class="food-image img-fluid"
-            src="./images/triple fried rice.jpg"
-            alt=""
-            height="120"
-          />
-          <input
-            class="rice"
-            type="checkbox"
-            name="rice"
-            value="triple fried rice"
-          />
-          triple fried rice-ksh 250 per plate
-          <br />
-          <img
-            class="food-image img-fluid"
-            src="./images/Spicy-Turmeric-Fried-Rice-featured-image.jpg"
-            alt=""
-            height="120"
-          />
-          <input class="rice" type="checkbox" name="rice" value="chilly rice" />
-          chilly rice-ksh 150 per a half
-          <br />
-          <img
-            class="food-image img-fluid"
-            src="./images/mushroom rice.jpeg"
-            alt=""
-            height="120"
-          />
-          <input
-            class="rice"
-            type="checkbox"
-            name="rice"
-            value="mushroom rice"
-          />
-          mushroom rice-ksh 250 per plate
-          <br />
-          <img
-            class="food-image img-fluid"
-            src="./images/combination-fried-rice.jpg"
-            alt=""
-            height="120"
-          />
-          <input
-            class="rice"
-            type="checkbox"
-            name="rice"
-            value="combination rice"
-          />
-          combination rice-ksh 200 per plate
-        </div>
-        <button type="submit" class="btn btn-dark btn-sm">Add to Order</button>
-      </div>
-
-      <div
-        class="card darker-bg border border-dark rounded mb-4 px-3 mx-2"
-        id="soups"
-      >
-        <h3 class="card-title">Soups:</h3>
-        <div class="menu-item card-body col">
-          <img
-            class="food-image img-fluid"
-            src="./images/clear soup.jpeg"
-            alt=""
-            height="120"
-          />
-          <input class="soup" type="checkbox" name="soup" value="clear soup" />
-          clear soup-ksh 80 full
-          <br />
-          <input
-            class="soup"
-            type="checkbox"
-            name="soup"
-            value="manchow soup"
-          />
-          manchow soup-ksh80 full
-          <br />
-          <img
-            class="food-image img-fluid"
-            src="./images/Vegetable_Manchow_Soup.jpg"
-            alt=""
-            height="120"
-          />
-          <input class="soup" type="checkbox" name="soup" value="royal soup" />
-          royal soup-ksh 100 full
-          <br />
-          <img
-            class="food-image img-fluid"
-            src="./images/royal soup.jpg"
-            alt=""
-            height="120"
-          /><input
-            class="soup"
-            type="checkbox"
-            name="soup"
-            value="sweet & com soup"
-          />
-          sweet & com soup-ksh100 full
-          <br />
-          <p>enjoy your meal</p>
-        </div>
-        <button type="submit" class="btn btn-dark btn-sm">Add to Order</button>
-      </div>
-
-      <div
-        class="card darker-bg border border-dark rounded mb-4 px-3 mx-2"
-        id="pasta"
-      >
-        <div class="menu-item card-body col">
-          <h3 class="card-title">Pasta:</h3>
-
-          <img
-            class="food-image img-fluid"
-            src="./images/pasta puttanesca.png"
-            alt=""
-            height="120"
-          /><input
-            class="pasta"
-            type="checkbox"
-            name="pasta"
-            value="pasta puttanesca"
-          />
-          pasta puttanesca-ksh 300
-          <br />
-          <img
-            class="food-image img-fluid"
-            src="./images/italian pasta salad.jpeg"
-            alt=""
-            height="120"
-          /><input
-            class="pasta"
-            type="checkbox"
-            name="pasta"
-            value="italian pasta salad"
-          />
-          italian pasta salad-ksh 400
-          <br />
-          <img
-            class="food-image img-fluid"
-            src="./images/creamy sausage.jpeg"
-            alt=""
-            height="120"
-          />
-          <input
-            class="pasta"
-            type="checkbox"
-            name="pasta"
-            value="creamy sausage pasta"
-          />
-          creamy sausage pasta- ksh 450
-          <br />
-          <input
-            class="pasta"
-            type="checkbox"
-            name="pasta"
-            value="cheese marinara"
-          />
-          cheese marinara- ksh 500
-          <br />
-        </div>
-        <button type="submit" class="btn btn-dark btn-sm">Add to Order</button>
-      </div>
-
-      <div
-        class="card darker-bg border border-dark rounded mb-4 px-3 mx-2"
+        class="card border border-dark bg-transparent border-0 roundedpx-3 mx-2"
         id="drinks"
       >
-        <div class="menu-item card-body col">
+        <div class="menu-item darker-bg card-body col">
           <h3 class="card-title">Drinks</h3>
 
           <img
@@ -342,63 +156,7 @@
         </div>
         <button type="submit" class="btn btn-dark btn-sm">Add to Order</button>
       </div>
-</div>
-<div class="contact">
-      <div
-        class="d-flex flex-row justify-content-center w-100 my-3 align-item-center mx-auto"
-        id="contact-section"
-      >
-        <div
-          class="card darker-bg border border-dark rounded mb-4 px-5 py-3 mx-2 mx-auto w-100"
-          id="contact"
-        >
-          <div class="row">
-            <div class="col-md-12">
-              <form id="contactForm">
-                <div class="heading" href="#feedback">
-                  <h2>Contact Us</h2>
-                </div>
-                <div class="md-12 my-3">
-                  <label for="email" class="text-white text-start h5 w-100"
-                    >Email address</label
-                  >
-                  <input
-                    type="email"
-                    class="form-control form-control-sm"
-                    id="Contactemail"
-                    placeholder="Enter your email here"
-                    aria-describedby="emailHelp"
-                    required
-                  />
-                  <div id="emailHelp" class="form-text text-start disabled">
-                    We'll never share your email with anyone else.
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label
-                    for="floatingTextarea"
-                    class="text-start w-100 h5text-white"
-                    >Comments</label
-                  >
-                  <textarea
-                    class="form-control form-control-sm"
-                    placeholder="Leave a comment here"
-                    id="floatingTextarea"
-                    rows="5"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  class="btn btn-dark w-100 mt-3 px-5 btn-sm"
-                >
-                  Submit
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-</div>
+
       <footer id="footer" class="w-100">
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-twitter"></a>
