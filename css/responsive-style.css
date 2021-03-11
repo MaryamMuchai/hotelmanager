@@ -1,0 +1,158 @@
+.darker-bg {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  border-width: 0;
+}
+.lighter-bg {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  border-width: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body .btn:hover {
+  background-color: #f7f7f7;
+  color: #000;
+}
+
+.sidebar-hidden {
+  align-items: flex-start !important;
+  z-index: 200;
+  height: max-content !important;
+  width: max-content !important;
+}
+
+#sidebarToggler {
+  display: none;
+}
+.hide {
+  display: none;
+}
+
+#pageContainer {
+  display: grid;
+  width: 95vw;
+  margin: auto;
+  grid-template-columns: 0.25fr 0.5fr 0.5fr;
+  grid-template-rows: 0.125fr 0.05fr 0.5fr 0.5fr;
+  grid-template-areas:
+    "nav nav nav "
+    "sidebar foodMenu foodMenu"
+    "sidebar rice soups"
+    "sidebar pasta drinks"
+    "sidebar contact contact"
+    "sidebar footer footer";
+}
+
+#nav {
+  grid-area: nav;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99%;
+  z-index: 100;
+}
+
+#foodMenu {
+  grid-area: foodMenu;
+  margin-top: 40px;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-self: center;
+}
+
+#rice {
+  grid-area: rice;
+  height: 300px;
+  padding: margin;
+}
+
+#soups {
+  grid-area: soups;
+  height: 300px;
+  border: #000 2px solid;
+}
+
+#pasta {
+  grid-area: pasta;
+  height: 300px;
+  border: #000 2px solid;
+}
+
+#drinks {
+  grid-area: drinks;
+  height: 300px;
+  border: #000 2px solid;
+}
+#contact-section {
+  grid-area: contact;
+  width: inherit;
+
+  text-align: center;
+}
+#footer {
+  grid-area: footer;
+}
+
+#footer a {
+  color: #fff;
+}
+
+@media screen and (max-width: 576px) {
+  #pageContainer {
+    display: grid;
+    width: 100vw;
+    height: max-content;
+    margin: auto;
+    grid-template-columns: 0.25fr 0.5fr;
+    grid-template-rows: 0.125fr 0.05fr 0.5fr 0.5fr 0.05fr 0.5fr 0.5fr 0.05fr 0.5fr;
+    grid-template-areas:
+      "nav nav "
+      "sidebar foodMenu "
+      "sidebar rice"
+      "sidebar soups"
+      "sidebar pasta"
+      "sidebar drinks"
+      "sidebar contact"
+      "sidebar footer";
+  }
+
+  #sidebarToggler {
+    top: 56px;
+    display: inline;
+  }
+
+  #sidebar {
+    z-index: 200;
+  }
+
+  #rice {
+    height: max-content;
+    width: 90vw;
+  }
+  #soups {
+    height: max-content;
+    width: 90vw;
+  }
+  #pasta {
+    height: max-content;
+    width: 90vw;
+  }
+  #drinks {
+    height: max-content;
+    width: 90vw;
+  }
+  #footer {
+    justify-content: center;
+  }
+}
