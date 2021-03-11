@@ -11,6 +11,12 @@ ul {
   list-style: none;
 }
 
+.food-image {
+  width: 25%;
+  height: auto;
+  margin: 10px 0;
+}
+
 body .btn:hover {
   background-color: #f7f7f7;
   color: #000;
@@ -73,25 +79,25 @@ body .btn:hover {
 
 #rice {
   grid-area: rice;
-  height: 300px;
+  height: max-content;
   padding: margin;
 }
 
 #soups {
   grid-area: soups;
-  height: 300px;
+  height: max-content;
   border: #000 2px solid;
 }
 
 #pasta {
   grid-area: pasta;
-  height: 300px;
+  height: max-content;
   border: #000 2px solid;
 }
 
 #drinks {
   grid-area: drinks;
-  height: 300px;
+  height: max-content;
   border: #000 2px solid;
 }
 #contact-section {
