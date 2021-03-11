@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./bootstrap-4.6.0-dist/css/bootstrap.css"
+    /> -->
+    <!-- added new bootstrap cdn links  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <!-- linking index to the new css file called responsive-style -->
+    <link rel="stylesheet" href="./css/index-responsive-style.css" />
+    <link rel="stylesheet" href="./css/contact-responsive-style.css" />
+
+    <!-- <script src="main.js"></script> -->
+  </head>
+  <!---Navbar-->
+  <body>
+    <div id="contactContainer">
+      <!-- changed to bootstrap navbar for easier responsive  -->
+      <nav id="nav" class="navbar navbar-expand-lg navbar-dark darker-bg px-5">
+        <a class="navbar-brand" href="#">KC Hotel</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav justify-content-end flex-row">
+            <li class="nav-item mx-3 active">
+              <a class="nav-link" href="#">Menu</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item mx-3 dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                data-toggle="modal"
+                data-target="#bookNow"
+                >Book your room</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="sidebar" class="sidebar darker-bg">
+        <button
+          id="sidebarToggler"
+          class="fixed-top bg-transparent border-0 text-white"
+        >
+          Open Sidebar
+        </button>
+        <div class="sidebar-items">
+          <ul>
+            <li><a href="#">Overview</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="drinks.html">Drinks</a></li>
+            <li><a href="contact.html">Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="d-flex flex-row justify-content-center w-100 my-3 align-item-center mx-auto"
+        id="contact-section"
+      >
+        <div
+          class="card darker-bg border border-dark rounded mb-4 px-5 py-3 mx-2 mx-auto w-100"
+          id="contact"
+        >
+          <div class="row">
+            <div class="col-md-12">
+              <form id="contactForm">
+                <div class="heading" href="#feedback">
+                  <h2>Contact Us</h2>
+                </div>
+                <div class="md-12 my-3">
+                  <label for="email" class="text-white text-start h5 w-100"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control form-control-sm"
+                    id="Contactemail"
+                    placeholder="Enter your email here"
+                    aria-describedby="emailHelp"
+                    required
+                  />
+                  <div id="emailHelp" class="form-text text-start disabled">
+                    We'll never share your email with anyone else.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label
+                    for="floatingTextarea"
+                    class="text-start w-100 h5text-white"
+                    >Comments</label
+                  >
+                  <textarea
+                    class="form-control form-control-sm"
+                    placeholder="Leave a comment here"
+                    id="floatingTextarea"
+                    rows="5"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-dark w-100 mt-3 px-5 btn-sm"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer id="footer" class="w-100">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-youtube"></a>
+      </footer>
+    </div>
+
+    <!-- modal -->
+    <div
+      class="modal fade"
+      id="bookNow"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog darker-bg">
+        <div class="modal-content darker-bg">
+          <div class="modal-header">
+            <!-- This is the book now button to reaveal the form -->
+            <h5 class="modal-title font-weight-bold" id="exampleModalLabel">
+              Book Room Now
+            </h5>
+            <button
+              type="button"
+              class="close btn text-white bg-transparent"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex align-items-center justify-content-center w-100">
+              <form onSubmit="submit(event)" class="rounded-lg">
+                <div class="row mx-auto w-100 my-2">
+                  <div
+                    class="form-group col justify-content-center align-items-center"
+                  >
+                    <label for="roomType" class="font-weight-bold"
+                      >Room Type</label
+                    >
+                    <select
+                      type="text"
+                      name="roomType"
+                      id=""
+                      class="form-control form-control-sm"
+                      placeholder=""
+                      aria-describedby="helpId"
+                    >
+                      <option value="" disabled selected>
+                        Select an option...
+                      </option>
+                      <option value="">Single Room</option>
+                      <option value="">Double Room</option>
+                    </select>
+                    <small id="helpId" class="text-muted">Help text</small>
+                  </div>
+                </div>
+
+                <div class="row w-100 mx-auto my-2">
+                  <div class="col justify-content-center align-items-center">
+                    <div class="form-group">
+                      <label for="checkIn " class="font-weight-bold"
+                        >Check In</label
+                      >
+                      <input
+                        type="date"
+                        name=""
+                        id="checkIn"
+                        class="form-control form-control-sm"
+                        placeholder=""
+                        aria-describedby="helpId"
+                      />
+                      <small id="helpId" class="text-muted">Help text</small>
+                    </div>
+                  </div>
+                  <div class="col justify-content-center align-items-center">
+                    <div class="form-group">
+                      <label for="checkOut" class="font-weight-bold"
+                        >Check Out</label
+                      >
+                      <input
+                        type="date"
+                        name=""
+                        id="checkIn"
+                        class="form-control form-control-sm"
+                        placeholder=""
+                        aria-describedby="helpId"
+                      />
+                      <small id="helpId" class="text-muted">Help text</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="row w-100 mx-auto my-2">
+                  <div class="col mx-auto">
+                    <button
+                      class="btn btn-dark w-100"
+                      data-dismiss="modal"
+                      type="submit"
+                    >
+                      Book Now
+                    </button>
+                  </div>
+                  <div class="col mx-auto">
+                    <button
+                      class="btn btn-white border-dark w-100"
+                      type="submit"
+                      data-dismiss="modal"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/sidebar.js"></script>
+  </body>
+</html>
